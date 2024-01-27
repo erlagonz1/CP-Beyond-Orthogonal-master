@@ -37,6 +37,38 @@ class Movement extends Phaser.Scene {
             })
         })
 
+        this.anims.create({
+            key: 'walk-up',
+            frameRate: 5,
+            repeat: -1,
+            frames: this.anims.generateFrameNumbers('character', {
+                start: 9,
+                end: 11
+            })
+        })
+
+        this.anims.create({
+            key: 'walk-left',
+            frameRate: 5,
+            repeat: -1,
+            frames: this.anims.generateFrameNumbers('character', {
+                start: 3,
+                end: 5
+            })
+        })
+
+        this.anims.create({
+            key: 'walk-right',
+            frameRate: 5,
+            repeat: -1,
+            frames: this.anims.generateFrameNumbers('character', {
+                start: 6,
+                end: 8
+            })
+        })
+
+
+
         this.player = this.physics.add.sprite(width/2, height/2, 'character', 1).setScale(2)
         this.player.body.setCollideWorldBounds(true)
 
